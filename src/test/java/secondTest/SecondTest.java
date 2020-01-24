@@ -1,4 +1,4 @@
-package firstTest;
+package secondTest;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,19 +12,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class FirstTest {
+public class SecondTest {
 	@Test
 	
 	public void validfirsttest() throws IOException {
 		
 		WebDriver wd= new FirefoxDriver();
 		wd.manage().window().maximize();
-		wd.get("https://www.google.com/");
+		wd.get("https://www.bing.com/");
 		WebElement data= wd.findElement(By.name("q"));
 		data.sendKeys("chennai");
 	    data.submit();
 	    File src= ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
-	    FileUtils.copyFile(src, new File("C:\\Users\\gvsak\\eclipse-workspace\\GitHubTest\\ScreenShot\\google.jpg"));
+	    FileUtils.copyFile(src, new File("C:\\Users\\gvsak\\eclipse-workspace\\GitHubTest\\ScreenShot\\google1.jpg"));
 	  
 	}
 
